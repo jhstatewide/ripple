@@ -46,6 +46,7 @@ module Ripple
     autoload :Finders
     autoload :Key
     autoload :Persistence
+    autoload :DynamicFinder
 
     included do
       extend ActiveModel::Naming
@@ -60,6 +61,7 @@ module Ripple
       include Ripple::Callbacks
       include Ripple::Conversion
       include Ripple::Document::Finders
+      include Ripple::Document::DynamicFinder
       include Ripple::Inspection
       include Ripple::NestedAttributes
     end
